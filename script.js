@@ -1,5 +1,8 @@
 const round = (number) => {
 
+
+    number = Number(number)
+
     const decimalPart = Math.abs(number - Math.trunc(number))
 
     if (decimalPart < 0.5) {
@@ -38,4 +41,7 @@ const round = (number) => {
     }
 }
 
-console.log(round(-3.5))
+
+const number = prompt('Zadejte číslo, které chcete zaokrouhlit: ')
+
+document.body.innerHTML = round(number)
